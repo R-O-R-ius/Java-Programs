@@ -1,0 +1,36 @@
+package list;
+
+import java.util.*;
+
+public class Arraylists {
+
+	public static void main(String args[]) {
+		
+		List<String> news = new ArrayList<>();
+		news.add("Aaj Tak");
+		news.add("News24");
+		news.add("R. Bharat");
+		news.add("DD National");
+		news.add("Zee News");
+		news.add("ABP News");
+		
+		System.out.println("news Channnels are \n"+ news);								//print list
+		news.set(0, "India Today");
+		System.out.println("news Channnels are \n"+ news);								//print after update list
+		
+		System.out.println("news Channnels present on given index is \n"+ news.get(4));	//Print news Channel present in given index
+		
+		System.out.println("news Channnel index is \n"+ news.indexOf("Zee News"));		//Index of given news Channel
+		
+		System.out.println("news Channnels are \n"+ news.indexOf("Aaj Tak"));			//-1 when given news Channel/value is not Present
+		
+		System.out.println("news Channnels are \n"+ news.subList(1, 3));				//sub list present in given range
+		
+		System.out.println("News Channels name After use of Iterator\n");
+		Iterator<String> itr =news.iterator();											//Print list by use of Iterator
+		while(itr.hasNext()) {
+			System.out.println("\n"+itr.next());
+		}
+		
+		}
+}
